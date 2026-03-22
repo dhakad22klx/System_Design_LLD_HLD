@@ -1,42 +1,28 @@
 package main
 
-import (
-    "errors"
-    // "fmt"
-)
+import "fmt"
 
-type BankAccount struct {
-    accountHolder string //first letter is lower case, so it is private to a package.
-    balance       float64
+type PaymentProcessor struct {
+    cardNumber string //first letter is lower case, so it is private to a package.
+    amount     float64
 }
 
-func NewBankAccount(accountHolder string) *BankAccount {
-    return &BankAccount{accountHolder: accountHolder, balance: 0.0}
+func maskCardNumber(cardNumber string) string { ///first letter is lower case, so function is private to a package.
+    return "****-****-****-" + cardNumber[len(cardNumber)-4:]
 }
 
-func (a *BankAccount) Deposit(amount float64) error {
-    if amount <= 0 {
-        return errors.New("deposit amount must be positive")
+func NewPaymentProcessor(cardNumber string, amount float64) *PaymentProcessor {
+    return &PaymentProcessor{
+        cardNumber: maskCardNumber(cardNumber),
+        amount:     amount,
     }
-    a.balance += amount
-    return nil
 }
 
-func (a *BankAccount) Withdraw(amount float64) error {
-    if amount <= 0 {
-        return errors.New("withdrawal amount must be positive")
-    }
-    if amount > a.balance {
-        return errors.New("insufficient funds")
-    }
-    a.balance -= amount
-    return nil
+func (p *PaymentProcessor) ProcessPayment() {
+    fmt.Printf("Processing payment of $%.2f for card %s\n", p.amount, p.cardNumber)
 }
 
-func (a *BankAccount) GetBalance() float64 {
-    return a.balance
-}
-
-func (a *BankAccount) GetAccountHolder() string {
-    return a.accountHolder
+func main() {
+    payment := NewPaymentProcessor("1234567812345678", 250.00)
+    payment.ProcessPayment()
 }
