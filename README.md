@@ -1,5 +1,5 @@
 #OOPS 
-Go to OOPS directory and run
+Go to LLD/OOPS directory and run
 ```
 go run .
 ```
