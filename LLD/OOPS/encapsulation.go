@@ -22,7 +22,7 @@ func (p *PaymentProcessor) ProcessPayment() {
     fmt.Printf("Processing payment of $%.2f for card %s\n", p.amount, p.cardNumber)
 }
 
-func main() {
-    payment := NewPaymentProcessor("1234567812345678", 250.00)
-    payment.ProcessPayment()
-}
+// func main() {
+//     payment := NewPaymentProcessor("1234567812345678", 250.00)
+//     payment.ProcessPayment()
+// }

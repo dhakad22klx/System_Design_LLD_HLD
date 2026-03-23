@@ -40,14 +40,14 @@ func (p *PushNotification) Send() {
         p.DeviceToken[:8], p.Message)
 }
 
-func main() {
-    notifications := []Notifier{
-        &EmailNotification{"alice@example.com", "Your order shipped!", "Order Update"},
-        &SMSNotification{"Bob", "Code: 482910", "+1-555-0123"},
-        &PushNotification{"Charlie", "New message", "d8a3f4b2c1e5a9b7"},
-    }
+// func main() {
+//     notifications := []Notifier{
+//         &EmailNotification{"alice@example.com", "Your order shipped!", "Order Update"},
+//         &SMSNotification{"Bob", "Code: 482910", "+1-555-0123"},
+//         &PushNotification{"Charlie", "New message", "d8a3f4b2c1e5a9b7"},
+//     }
 
-    for _, n := range notifications {
-        n.Send()
-    }
-}
+//     for _, n := range notifications {
+//         n.Send()
+//     }
+// }
