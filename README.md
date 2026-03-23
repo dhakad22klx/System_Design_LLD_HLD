@@ -1,6 +1,7 @@
 # LLD & HLD practice repository combining online resources and personal contributions.
-##OOPS 
-Go to LLD/OOPS directory and run
+## To run OOP Fundamental files. 
+Go to LLD/OOP directory and run
 ```
 go run .
 ```
+
