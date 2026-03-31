@@ -1,13 +1,12 @@
 # Core Software Design Principles
 
-A quick reference guide to four foundational principles every developer should know.
+A quick reference guide to four foundational principles.
 
 ---
 
 ## 1. DRY — Don't Repeat Yourself
 
 > "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system."
-> — *The Pragmatic Programmer*
 
 Avoid duplicating logic. If you find yourself writing the same code in two places, extract it.
 
