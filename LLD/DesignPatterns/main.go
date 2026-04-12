@@ -2,6 +2,7 @@ package main
 
 import (
 	singleton "designpatterns/Singleton"
+	builder "designpatterns/builder"
 	"fmt"
 )
 
@@ -10,4 +11,6 @@ func main() {
 	testDependencyInjection()
 	fmt.Println("Calling Singleton Patterns")
 	singleton.GetInstance()
+	fmt.Println("Calling Builder Pattern")
+	builder.TestBuilderPattern()
 }
