@@ -2,6 +2,7 @@ package main
 
 import (
 	singleton "designpatterns/Singleton"
+	abstractfactory "designpatterns/abstract-factory"
 	builder "designpatterns/builder"
 	factory "designpatterns/factory-method"
 	"fmt"
@@ -16,4 +17,6 @@ func main() {
 	builder.TestBuilderPattern()
 	fmt.Println("Calling Factory Method")
 	factory.TestFactoryMethod()
+	fmt.Println("Calling Abstract Factory Method")
+	abstractfactory.TestAbstractFactory()
 }
