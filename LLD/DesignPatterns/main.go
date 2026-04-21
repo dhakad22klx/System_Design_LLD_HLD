@@ -5,6 +5,7 @@ import (
 	abstractfactory "designpatterns/abstract-factory"
 	builder "designpatterns/builder"
 	factory "designpatterns/factory-method"
+	"designpatterns/prototype"
 	"fmt"
 )
 
@@ -19,4 +20,6 @@ func main() {
 	factory.TestFactoryMethod()
 	fmt.Println("Calling Abstract Factory Method")
 	abstractfactory.TestAbstractFactory()
+	fmt.Println("Calling Prototype Method")
+	prototype.TestPrototype()
 }
