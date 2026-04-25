@@ -3,6 +3,7 @@ package main
 import (
 	singleton "designpatterns/Singleton"
 	abstractfactory "designpatterns/abstract-factory"
+	adapter "designpatterns/adapter"
 	builder "designpatterns/builder"
 	factory "designpatterns/factory-method"
 	"designpatterns/prototype"
@@ -22,4 +23,6 @@ func main() {
 	abstractfactory.TestAbstractFactory()
 	fmt.Println("Calling Prototype Method")
 	prototype.TestPrototype()
+	fmt.Println("Calling Adapter Pattern")
+	adapter.TestAdapterPattern()
 }
