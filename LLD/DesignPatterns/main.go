@@ -9,6 +9,7 @@ import (
 	"designpatterns/composite"
 	decorator "designpatterns/decorator"
 	factory "designpatterns/factory-method"
+	"designpatterns/flyweight"
 	"designpatterns/prototype"
 	"designpatterns/proxy"
 	"fmt"
@@ -37,4 +38,6 @@ func main() {
 	proxy.TestProxyPattern()
 	fmt.Println("\nCalling Bridge Pattern")
 	bridge.TestBridgePattern()
+	fmt.Println("\nCalling Flyweight Pattern")
+	flyweight.TestFlyweight()
 }
