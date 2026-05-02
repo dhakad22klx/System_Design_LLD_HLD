@@ -5,6 +5,7 @@ import (
 	abstractfactory "designpatterns/abstract-factory"
 	adapter "designpatterns/adapter"
 	builder "designpatterns/builder"
+	"designpatterns/composite"
 	decorator "designpatterns/decorator"
 	factory "designpatterns/factory-method"
 	"designpatterns/prototype"
@@ -28,4 +29,6 @@ func main() {
 	adapter.TestAdapterPattern()
 	fmt.Println("\nCalling Decorator Design pattern")
 	decorator.TestDecoratorPattern()
+	fmt.Println("\nCalling Composite Design Pattern")
+	composite.TestCompositePattern()
 }
