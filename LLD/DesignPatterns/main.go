@@ -9,6 +9,7 @@ import (
 	decorator "designpatterns/decorator"
 	factory "designpatterns/factory-method"
 	"designpatterns/prototype"
+	"designpatterns/proxy"
 	"fmt"
 )
 
@@ -31,4 +32,6 @@ func main() {
 	decorator.TestDecoratorPattern()
 	fmt.Println("\nCalling Composite Design Pattern")
 	composite.TestCompositePattern()
+	fmt.Println("\nCalling Proxy Pattern")
+	proxy.TestProxyPattern()
 }
