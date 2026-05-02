@@ -4,6 +4,7 @@ import (
 	singleton "designpatterns/Singleton"
 	abstractfactory "designpatterns/abstract-factory"
 	adapter "designpatterns/adapter"
+	"designpatterns/bridge"
 	builder "designpatterns/builder"
 	"designpatterns/composite"
 	decorator "designpatterns/decorator"
@@ -34,4 +35,6 @@ func main() {
 	composite.TestCompositePattern()
 	fmt.Println("\nCalling Proxy Pattern")
 	proxy.TestProxyPattern()
+	fmt.Println("\nCalling Bridge Pattern")
+	bridge.TestBridgePattern()
 }
