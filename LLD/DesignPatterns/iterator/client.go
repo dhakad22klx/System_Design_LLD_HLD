@@ -11,6 +11,14 @@ complex data structure without exposing its internal details.
 
 Thanks to the Iterator, clients can go over elements of different
 collections in a similar fashion using a single iterator interface.
+
+---
+
+It’s particularly useful in situations where:
+
+- To traverse a collection (like a list, tree, or graph) in a consistent and flexible way.
+- To support multiple ways to iterate (e.g., forward, backward, filtering, or skipping elements).
+- To decouple traversal logic from collection structure, so the client doesn't depend on the internal representatio
 */
 
 import "fmt"
