@@ -8,3 +8,14 @@ It’s particularly useful in situations where:
 - The exact type of object to be created isn't known until runtime.
 - Object creation logic is complex, repetitive, or needs encapsulation.
 - You want to follow the Open/Closed Principle, open for extension, closed for modification.
+
+
+-------------
+
+
+Factory method is a creational design pattern which solves the problem of creating product objects 
+without specifying their concrete classes.
+
+The Factory Method defines a method, which should be used for creating objects instead of using 
+a direct constructor call (new operator). Subclasses can override this method to change the class of objects 
+that will be created.

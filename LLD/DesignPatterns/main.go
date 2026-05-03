@@ -10,6 +10,7 @@ import (
 	decorator "designpatterns/decorator"
 	factory "designpatterns/factory-method"
 	"designpatterns/flyweight"
+	"designpatterns/iterator"
 	"designpatterns/prototype"
 	"designpatterns/proxy"
 	"designpatterns/strategy"
@@ -43,4 +44,6 @@ func main() {
 	flyweight.TestFlyweight()
 	fmt.Println("\nCalling Strategy")
 	strategy.TestStrategyPattern()
+	fmt.Println("\nCalling Iterator Pattern")
+	iterator.TestIteratorPattern()
 }
