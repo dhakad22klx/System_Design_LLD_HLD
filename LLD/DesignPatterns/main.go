@@ -12,6 +12,7 @@ import (
 	"designpatterns/flyweight"
 	"designpatterns/prototype"
 	"designpatterns/proxy"
+	"designpatterns/strategy"
 	"fmt"
 )
 
@@ -40,4 +41,6 @@ func main() {
 	bridge.TestBridgePattern()
 	fmt.Println("\nCalling Flyweight Pattern")
 	flyweight.TestFlyweight()
+	fmt.Println("\nCalling Strategy")
+	strategy.TestStrategyPattern()
 }
