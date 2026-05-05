@@ -11,6 +11,7 @@ import (
 	factory "designpatterns/factory-method"
 	"designpatterns/flyweight"
 	"designpatterns/iterator"
+	"designpatterns/observer"
 	"designpatterns/prototype"
 	"designpatterns/proxy"
 	"designpatterns/strategy"
@@ -44,6 +45,8 @@ func main() {
 	flyweight.TestFlyweight()
 	fmt.Println("\nCalling Strategy")
 	strategy.TestStrategyPattern()
-	fmt.Println("\nCalling Iterator Pattern")
+	fmt.Println("\nCalling Iterator Pattern") 
 	iterator.TestIteratorPattern()
+	fmt.Println("\nCalling Observer Pattern")
+	observer.TestObserverPattern()
 }
