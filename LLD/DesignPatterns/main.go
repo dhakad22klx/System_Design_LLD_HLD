@@ -6,6 +6,7 @@ import (
 	adapter "designpatterns/adapter"
 	"designpatterns/bridge"
 	builder "designpatterns/builder"
+	commandpattern "designpatterns/command-pattern"
 	"designpatterns/composite"
 	decorator "designpatterns/decorator"
 	factory "designpatterns/factory-method"
@@ -14,6 +15,7 @@ import (
 	"designpatterns/observer"
 	"designpatterns/prototype"
 	"designpatterns/proxy"
+	"designpatterns/state"
 	"designpatterns/strategy"
 	"fmt"
 )
@@ -45,8 +47,12 @@ func main() {
 	flyweight.TestFlyweight()
 	fmt.Println("\nCalling Strategy")
 	strategy.TestStrategyPattern()
-	fmt.Println("\nCalling Iterator Pattern") 
+	fmt.Println("\nCalling Iterator Pattern")
 	iterator.TestIteratorPattern()
 	fmt.Println("\nCalling Observer Pattern")
 	observer.TestObserverPattern()
+	fmt.Println("\nCalling Command Pattern")
+	commandpattern.TestCommandPattern()
+	fmt.Println("\nCalling State Pattern")
+	state.TestStatePattern()
 }
