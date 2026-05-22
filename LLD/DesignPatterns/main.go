@@ -6,6 +6,7 @@ import (
 	adapter "designpatterns/adapter"
 	"designpatterns/bridge"
 	builder "designpatterns/builder"
+	chainofresponsibility "designpatterns/chain-of-responsibility"
 	commandpattern "designpatterns/command-pattern"
 	"designpatterns/composite"
 	decorator "designpatterns/decorator"
@@ -58,4 +59,6 @@ func main() {
 	state.TestStatePattern()
 	fmt.Println("\nCalling Template Pattern")
 	templatemethod.TestTemplateMethod()
+	fmt.Println("\nCalling Chain of Responsibility")
+	chainofresponsibility.TestChainOfResponsibility()
 }
