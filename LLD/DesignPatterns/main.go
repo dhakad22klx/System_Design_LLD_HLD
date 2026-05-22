@@ -17,6 +17,7 @@ import (
 	"designpatterns/proxy"
 	"designpatterns/state"
 	"designpatterns/strategy"
+	templatemethod "designpatterns/template-method"
 	"fmt"
 )
 
@@ -55,4 +56,6 @@ func main() {
 	commandpattern.TestCommandPattern()
 	fmt.Println("\nCalling State Pattern")
 	state.TestStatePattern()
+	fmt.Println("\nCalling Template Pattern")
+	templatemethod.TestTemplateMethod()
 }
