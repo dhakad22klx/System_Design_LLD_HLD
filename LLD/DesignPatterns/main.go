@@ -13,6 +13,7 @@ import (
 	factory "designpatterns/factory-method"
 	"designpatterns/flyweight"
 	"designpatterns/iterator"
+	"designpatterns/mediator"
 	"designpatterns/observer"
 	"designpatterns/prototype"
 	"designpatterns/proxy"
@@ -61,4 +62,6 @@ func main() {
 	templatemethod.TestTemplateMethod()
 	fmt.Println("\nCalling Chain of Responsibility")
 	chainofresponsibility.TestChainOfResponsibility()
+	fmt.Println("\nCalling Mediator Desing Patter")
+	mediator.TestMediatorPattern()
 }
