@@ -14,6 +14,7 @@ import (
 	"designpatterns/flyweight"
 	"designpatterns/iterator"
 	"designpatterns/mediator"
+	"designpatterns/memento"
 	"designpatterns/observer"
 	"designpatterns/prototype"
 	"designpatterns/proxy"
@@ -64,4 +65,6 @@ func main() {
 	chainofresponsibility.TestChainOfResponsibility()
 	fmt.Println("\nCalling Mediator Desing Patter")
 	mediator.TestMediatorPattern()
+	fmt.Println("\nCalling Memento Pattern")
+	memento.TestMementoPattern()
 }
