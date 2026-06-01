@@ -3,8 +3,6 @@ package entities
 import (
 	"fmt"
 	"sync/atomic"
-
-	"stack.overflow/enums"
 )
 
 type Question struct {
@@ -13,7 +11,7 @@ type Question struct {
 	tags           []*Tag
 	answers        []*Answer
 	acceptedAnswer *Answer
-	isClosed       bool
+	questionState  IQuestionState
 }
 
 var questionIdCounter atomic.Int64
@@ -26,26 +24,20 @@ func NewQuestion(body string, title string, author *User, tags ...*Tag) *Questio
 		tags:           tags,
 		answers:        make([]*Answer, 0),
 		acceptedAnswer: nil,
-		isClosed:       false,
+		questionState:  &QuestionOpenState{},
 	}
 }
 
 func (q *Question) AddAnswer(answer *Answer) {
-	q.mu.Lock()
-	q.answers = append(q.answers, answer)
-	q.mu.Unlock()
+	q.questionState.addAnswer(q, answer)
 }
 
 func (q *Question) AcceptAnswer(answer *Answer) {
-	q.mu.Lock()
-	defer q.mu.Unlock()
+	q.questionState.acceptAnswer(q, answer)
+}
 
-	if q.GetAuthor().GetID() != answer.GetAuthor().GetID() && q.acceptedAnswer == nil {
-		q.acceptedAnswer = answer
-		q.isClosed = true
-		answer.SetAccepted(true)
-		q.notifyObservers(NewEvent(enums.ACCEPT_ANSWER, answer.GetAuthor(), &answer.Post))
-	}
+func (q *Question) setState(state IQuestionState) {
+	q.questionState = state
 }
 
 func (q *Question) GetTitle() string {
@@ -58,4 +50,8 @@ func (q *Question) GetTags() []*Tag {
 
 func (q *Question) GetAnswers() []*Answer {
 	return q.answers
+}
+
+func (q *Question) GetAcceptedAnswer() *Answer {
+	return q.acceptedAnswer
 }

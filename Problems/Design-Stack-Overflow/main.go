@@ -15,6 +15,7 @@ func main() {
 	alice := service.CreateUser("Alice")
 	bob := service.CreateUser("Bob")
 	charlie := service.CreateUser("Charlie")
+	deepak := service.CreateUser("Deepak Dhakad")
 
 	fmt.Printf("Create user IDs %s, %s, %s.\n", alice.GetID(), bob.GetID(), charlie.GetID())
 
@@ -44,6 +45,10 @@ func main() {
 	fmt.Println("\n--- Alice accepts Charlie's answer ---")
 	service.AcceptAnswer(question.GetID(), charlieAnswer.GetID())
 	printReputations(alice, bob, charlie)
+
+	//Testing state pattern implementation
+	service.PostAnswer(deepak.GetID(), question.GetID(), "You can use the java.util.Observer interface.")
+	service.AcceptAnswer(question.GetID(), charlieAnswer.GetID())
 
 	// 6.1 Search for Questions by Keyword
 	fmt.Println("\n Question Search by keyword: 'implement'---")
