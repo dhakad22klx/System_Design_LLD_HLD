@@ -59,7 +59,7 @@ func (system *TicTacToeSystem) GetGameStatus() (enums.GameStatus, error) {
 	defer system.mu.Unlock()
 
 	if system.currentGame == nil {
-		return enums.NO_GAME_EXIST, fmt.Errorf("no active game.")
+		return enums.NO_GAME_EXIST, fmt.Errorf("no active game")
 	}
 	return system.currentGame.GetStatus(), nil
 }
